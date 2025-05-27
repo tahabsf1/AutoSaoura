@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: white;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.welcome-screen {
+  background: linear-gradient(to bottom right, #001F3F, #003366);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.welcome-screen h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+.welcome-screen p {
+  max-width: 600px;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+.btn {
+  background-color: #003366;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #002244;
+  transform: scale(1.05);
+}
+.main-content {
+  display: none;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.contact-section {
+  background-color: #001F3F;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.contact-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.contact-buttons button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+.contact-buttons button:hover {
+  background-color: #333;
+}
+.cars-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+@media(min-width: 768px) {
+  .cars-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.car-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: box-shadow 0.3s ease, transform 0.5s ease;
+  cursor: default;
+  animation: fadeUp 1s ease;
+}
+.car-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.car-image-placeholder {
+  height: 150px;
+  background: linear-gradient(to right, #ddd, #ccc);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.car-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.car-description {
+  font-size: 0.9rem;
+  color: #555;
+}
+footer {
+  background-color: #001F3F;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+footer p {
+  margin: 0 0 10px;
+}
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 1rem;
+}
+footer .footer-links a,
+footer .footer-links span {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+.animated-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  animation: bounceCar 1.5s infinite alternate;
+}
+@keyframes bounceCar {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(15px); }
+}
